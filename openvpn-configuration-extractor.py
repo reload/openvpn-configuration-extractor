@@ -61,6 +61,10 @@ if __name__ == '__main__':
 	# We need the configuration file's path.
 	if len(sys.argv) >= 2:
 		configuration_filepath = sys.argv[1]
+	else:
+		print_usage()
+		sys.exit(1)
+	
 	# Make this the absolute path.
 	configuration_filepath = os.path.abspath(configuration_filepath)
 
